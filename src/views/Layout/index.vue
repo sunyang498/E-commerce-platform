@@ -12,9 +12,9 @@ onMounted(()=>categoryStore.getCategory())
 </script>
 
 <template>
+    <LayoutFlex></LayoutFlex>
     <LayoutNav></LayoutNav>
     <LayoutHeader></LayoutHeader>
-    <LayoutFooter></LayoutFooter>
     <RouterView></RouterView>
-    <LayoutFlex></LayoutFlex>
+    <LayoutFooter></LayoutFooter>
 </template>
