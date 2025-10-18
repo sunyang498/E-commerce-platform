@@ -2,9 +2,13 @@
 import { getBannerAPI } from '@/apis/home';
 import {onMounted, ref} from 'vue'
 const bannerList=ref([])
+const props=defineProps({
+    parametric:String
+})
 const getBanner=async()=>{
-    const res = await getBannerAPI()
-    console.log(res)
+    const res = await getBannerAPI({
+        distributionSite:props.parametric
+    })
     bannerList.value=res.result
 }
 
@@ -32,11 +36,6 @@ onMounted(()=>{
 .home-banner {
     width: 1240px;
     height: 500px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 98;
-
     img {
         width: 100%;
         height: 500px;

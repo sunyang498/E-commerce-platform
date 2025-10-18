@@ -10,7 +10,7 @@ import HomePanel from './components/HomePanel.vue'
 <template>
   <div class="container">
     <HomeCategory></HomeCategory>
-    <HomeBanner></HomeBanner>
+    <HomeBanner style="position: absolute;left: 0;top: 0;z-index: 98;"></HomeBanner>
   </div>
   <HomeNew></HomeNew>
   <HomeHot></HomeHot>
